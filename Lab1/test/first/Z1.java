@@ -1,5 +1,12 @@
 package test.first;
 
+/**
+ * zxcursed - mana break
+ *
+ * [▶] [=========-----] 00:21 / 01:33
+ *
+ */
+
 public class Z1 {
     public static void main(String[] args) {
         if (args.length == 0) {

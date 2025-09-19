@@ -1,28 +1,37 @@
-package l2;
+package Lab2;
 
 import java.awt.*;
 
-// Расширяем класс DrawableRect
 public class ColoredRect extends DrawableRect {
-    private Color inColor; // Цвет заливки
+    private Color inColor;
 
-    // Конструктор с дополнительным параметром для цвета заливки
     public ColoredRect(int x1, int y1, int x2, int y2, Color outColor, Color inColor) {
         super(x1, y1, x2, y2, outColor);
         this.inColor = inColor;
     }
 
-    // Переопределяем метод отрисовки
+    public ColoredRect(int width, int height, Color outColor, Color inColor) {
+        super(width, height, outColor);
+        this.inColor = inColor;
+    }
+
+    public ColoredRect(Color outColor, Color inColor) {
+        super(outColor);
+        this.inColor = inColor;
+    }
+
+
     @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
+    public void draw(Graphics g) {
+        int w = x2 - x1;
+        int h = y2 - y1;
 
-        // Устанавливаем и рисуем цвет заливки
+
         g.setColor(inColor);
-        g.fillRect(rect.x1, rect.y1, rect.getWidth(), rect.getHeight());
+        g.fillRect(x1, y1, w, h);
 
-        // Устанавливаем и рисуем цвет границы
+
         g.setColor(outColor);
-        g.drawRect(rect.x1, rect.y1, rect.getWidth(), rect.getHeight());
+        g.drawRect(x1, y1, w, h);
     }
 }

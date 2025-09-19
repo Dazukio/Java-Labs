@@ -1,26 +1,29 @@
-package l2;
+package Lab2;
 
 import java.awt.*;
-import javax.swing.*;
 
-public class DrawableRect extends JPanel {
-    public Color outColor; // Используем private для инкапсуляции
-    public Rectangle rect;
+public class DrawableRect extends Rectangle {
+    protected Color outColor;
 
-    public DrawableRect(int x1, int y1, int x2, int y2, Color color) {
-        rect = new Rectangle(x1, y1, x2, y2);
-        this.outColor = color;
+    public DrawableRect(int x1, int y1, int x2, int y2, Color outColor) {
+        super(x1, y1, x2, y2);
+        this.outColor = outColor;
     }
 
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        g.setColor(outColor);
-        if (rect.x1 < rect.x2 && rect.y1 > rect.y2) {
-            g.drawRect(rect.x1, rect.y1, rect.getWidth(), rect.getHeight());
-        } else {
+    public DrawableRect(int width, int height, Color outColor) {
+        super(width, height);
+        this.outColor = outColor;
+    }
 
-            g.drawRect(0, 0, 100, 100);
-        }
+    public DrawableRect(Color outColor) {
+        super();
+        this.outColor = outColor;
+    }
+
+    public void draw(Graphics g) {
+        g.setColor(outColor);
+        int w = x2 - x1;
+        int h = y2 - y1;
+        g.drawRect(x1, y1, w, h);
     }
 }
