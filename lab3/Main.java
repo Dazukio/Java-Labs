@@ -1,4 +1,4 @@
-package lab2;
+package lab3;
 
 /**
  * 
@@ -70,21 +70,21 @@ public class Main extends JPanel {
         g.drawString("ColoredRect", cr1.x1, cr1.y1 - 5);
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Rectangles Demo");
-        Main panel = new Main();
+    // public static void main(String[] args) {
+    // JFrame frame = new JFrame("Rectangles Demo");
+    // Main panel = new Main();
 
-        frame.add(panel);
-        frame.setSize(600, 400);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+    // frame.add(panel);
+    // frame.setSize(600, 400);
+    // frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    // frame.setVisible(true);
 
-        // Дополнительно выводим в консоль
-        System.out.println("Initial and moved states:");
-        panel.r1.rect_print();
-        panel.r2.rect_print();
-        panel.r3.rect_print();
-        System.out.println("\nUnion r1 и r2:");
-        panel.rUnion.rect_print();
-    }
+    // // Дополнительно выводим в консоль
+    // System.out.println("Initial and moved states:");
+    // panel.r1.rect_print();
+    // panel.r2.rect_print();
+    // panel.r3.rect_print();
+    // System.out.println("\nUnion r1 и r2:");
+    // panel.rUnion.rect_print();
+    // }
 }

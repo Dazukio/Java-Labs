@@ -1,4 +1,4 @@
-package Lab2;
+package lab3;
 
 import java.awt.*;
 
@@ -23,8 +23,8 @@ public class Rectangle {
     public void rect_print() {
         System.out.println(
                 "Прямоугольник: левый верхний угол = (" + x1 + ", " + y1 + "), " +
-                "правый нижний угол = (" + x2 + ", " + y2 + "), " +
-                "ширина = " + (x2 - x1) + ", высота = " + (y2 - y1));
+                        "правый нижний угол = (" + x2 + ", " + y2 + "), " +
+                        "ширина = " + (x2 - x1) + ", высота = " + (y2 - y1));
     }
 
     public void move(int dx, int dy) {
